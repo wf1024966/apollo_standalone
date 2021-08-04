@@ -14,7 +14,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 # Install from source
 VERSION=1.9.0
 
-wget https://github.com.cnpmjs.org/pocoproject/poco/archive/poco-${VERSION}-release.tar.gz  --no-check-certificate
+wget https://github.com/pocoproject/poco/archive/poco-${VERSION}-release.tar.gz  --no-check-certificate
 tar -xf poco-${VERSION}-release.tar.gz
 
 # we cant use cmake because poco requires > 3.2

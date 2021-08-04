@@ -21,7 +21,7 @@ install_protobuf()
     echo "Installing protobuf....."
     cd /tmp
     rm -rf protobuf-${LANG}-${VERSION}.tar.gz
-    wget https://github.com.cnpmjs.org/protocolbuffers/protobuf/releases/download/v${VERSION}/protobuf-${LANG}-${VERSION}.tar.gz  --no-check-certificate
+    wget https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protobuf-${LANG}-${VERSION}.tar.gz  --no-check-certificate
     tar xzf protobuf-${LANG}-${VERSION}.tar.gz
     cd protobuf-${VERSION}
     ./autogen.sh
