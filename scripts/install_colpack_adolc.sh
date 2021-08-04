@@ -21,7 +21,7 @@ install_adolc()
     wget https://www.coin-or.org/download/source/ADOL-C/ADOL-C-2.6.3.zip -O ADOL-C-2.6.3.zip --no-check-certificate
     unzip ADOL-C-2.6.3.zip
     cd ADOL-C-2.6.3
-    ./configure --prefix="/usr/local" --enable-sparse --enable-addexa --enable-static --with-openmp-flag="-fopenmp" --with-colpack="/usr/local" ADD_CXXFLAGS="-fPIC" ADD_CFLAGS="-fPIC" ADD_FFLAGS="-fPIC"
+    ./configure --prefix="/usr/local" --host=arm-linux CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++ --enable-sparse --enable-addexa --enable-static --with-openmp-flag="-fopenmp" --with-colpack="/usr/local" ADD_CXXFLAGS="-fPIC" ADD_CFLAGS="-fPIC" ADD_FFLAGS="-fPIC"
     sudo make -j8 all
     sudo make install
     echo "/usr/local/lib64" > libadolc.conf
