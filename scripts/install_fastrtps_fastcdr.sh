@@ -20,7 +20,7 @@ set -e
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-rm -rf Fast-RTPS && git clone https://github.com/eProsima/Fast-RTPS.git
+rm -rf Fast-RTPS && git clone https://github.com.cnpmjs.org/eProsima/Fast-RTPS.git
 pushd Fast-RTPS
     git checkout origin/release/1.5.0
     git submodule init
