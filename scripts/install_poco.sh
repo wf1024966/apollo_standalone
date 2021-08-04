@@ -23,7 +23,7 @@ tar -xf poco-${VERSION}-release.tar.gz
 # ref: https://pocoproject.org/docs/00200-GettingStarted.html
 
 pushd poco-poco-${VERSION}-release
-  ./configure --omit=Data/ODBC,Data/MySQL && \
+  ./configure --omit=Data/ODBC,Data/MySQL --host=arm-linux CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++ && \
          sudo make -s -j`nproc` && \
          sudo make -s -j`nproc` install
 popd

@@ -9,7 +9,7 @@ install_copack()
     autoreconf -vif
     mkdir mywork
     cd mywork
-    ../configure --prefix=/usr/local
+    ../configure --prefix=/usr/local --host=arm-linux CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++
     make -j8
     sudo make install
 }

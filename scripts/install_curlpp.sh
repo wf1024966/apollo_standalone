@@ -1,2 +1,2 @@
 set -e
-sudo apt-get install -y libcurlpp-dev
+apt-get install -y libcurlpp-dev

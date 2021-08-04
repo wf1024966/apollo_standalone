@@ -35,7 +35,7 @@ install_protobuf()
     # the system.  Be careful with the installation directory
     #export CC=/usr/local/bin/gcc
     #export CXX=/usr/local/bin/g++
-    ./configure --prefix=/usr/local --with-pic  # default is /usr/local
+    ./configure --prefix=/usr/local --with-pic  --host=arm-linux CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++# default is /usr/local
     make -j4
     sudo make install
     # Some of the headers won't be installed by default using configure script, we do it manually
