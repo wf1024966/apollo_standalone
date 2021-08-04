@@ -15,7 +15,7 @@ install_gflags()
 install_glog()
 {
     cd /tmp
-    wget https://github.com/google/glog/archive/v0.3.5.tar.gz --no-check-certificate
+    wget https://gitee.com/Coxhuang/glog/repository/archive/v0.3.5.zip --no-check-certificate
     tar xzf v0.3.5.tar.gz
     cd glog-0.3.5
     export LDFLAGS='-L/usr/local/lib'
