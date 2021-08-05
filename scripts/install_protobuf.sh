@@ -12,7 +12,7 @@ main()
 
 install_dependencies()
 {
-    sudo apt-get -y install autoconf automake libtool curl make g++ unzip
+      apt-get -y install autoconf automake libtool curl make g++ unzip
 }
 
 
@@ -37,11 +37,11 @@ install_protobuf()
     #export CXX=/usr/local/bin/g++
     ./configure --prefix=/usr/local --with-pic  --host=arm-linux CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++# default is /usr/local
     make -j4
-    sudo make install
+      make install
     # Some of the headers won't be installed by default using configure script, we do it manually
-    cd src/google/protobuf/stubs && sudo cp -r *.h /usr/local/include/google/protobuf/stubs/ && cd -
+    cd src/google/protobuf/stubs &&   cp -r *.h /usr/local/include/google/protobuf/stubs/ && cd -
     cd ..
-    sudo ldconfig
+      ldconfig
     rm -rf protobuf-${LANG}-${VERSION}.tar.gz
     echo "protobuf version ${VERSION} installed."
 }

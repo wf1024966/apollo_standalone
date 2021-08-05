@@ -33,7 +33,7 @@ bash scripts/install_dependencies.sh
 mkdir -p src/apollo/build && cd src/apollo/build
 cmake ..
 make -j$(nproc)
-sudo make install
+  make install
 ```
 All the test binary and library targets, config files and testdata will be installed to `/apollo`.
 
@@ -43,7 +43,7 @@ If you have followed the [instruction](https://yuzhangbit.github.io/tools/nvidia
 mkdir -p src/apollo/build && cd src/apollo/build
 cmake -DENABLE_CUDA=ON ..
 make -j$(nproc)
-sudo make install
+  make install
 ```
 
 ## Run Tests
@@ -52,7 +52,7 @@ sudo make install
 bash run_all_test.bash
 ```
 
-Since apollo tests need to load test data in `/apollo` directory to run, you have to do `sudo make install` first.
+Since apollo tests need to load test data in `/apollo` directory to run, you have to do `  make install` first.
 
 ## Example
 We provide a simple [example](./src/example_project/src/open_space_demo.cpp) for open_space planner, here is the result.

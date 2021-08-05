@@ -9,7 +9,7 @@ install_gflags()
     cd gflags-2.2.0/build
     CXXFLAGS="-fPIC" cmake -DBUILD_SHARED_LIBS=true -DGFLAGS_NAMESPACE=google ..
     make -j8
-    sudo make install
+      make install
 }
 
 install_glog()
@@ -21,7 +21,7 @@ install_glog()
     export LDFLAGS='-L/usr/local/lib'
     ./configure --enable-shared --host=arm-linux CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++
     make CXXFLAGS='-Wno-sign-compare -Wno-unused-local-typedefs -fPIC -D_START_GOOGLE_NAMESPACE_="namespace google {" -D_END_GOOGLE_NAMESPACE_="}" -DGOOGLE_NAMESPACE="google" -DHAVE_PTHREAD -DHAVE_SYS_UTSNAME_H -DHAVE_SYS_SYSCALL_H -DHAVE_SYS_TIME_H -DHAVE_STDINT_H -DHAVE_STRING_H -DHAVE_PREAD -DHAVE_FCNTL -DHAVE_SYS_TYPES_H -DHAVE_SYSLOG_H -DHAVE_LIB_GFLAGS -DHAVE_UNISTD_H'
-    sudo make install
+      make install
 }
 
 

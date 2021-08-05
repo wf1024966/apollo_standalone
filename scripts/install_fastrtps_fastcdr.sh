@@ -29,12 +29,12 @@ pushd Fast-RTPS
     mkdir -p build && cd build
     cmake -DEPROSIMA_BUILD=ON -DCMAKE_INSTALL_PREFIX=/usr/local/fast-rtps ../
     make -j `nproc`
-    sudo make install
+      make install
 popd
 
 echo  -e "\033[43;35m >>>>>>>> create ld for fast_rtps \033[0m"
-sudo sh -c 'echo "/usr/local/fast-rtps/lib" >> /etc/ld.so.conf.d/libfast_rtps.conf'
-sudo ldconfig
+  sh -c 'echo "/usr/local/fast-rtps/lib" >> /etc/ld.so.conf.d/libfast_rtps.conf'
+  ldconfig
 
 # clean up
 rm -rf Fast-RTPS

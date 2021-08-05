@@ -8,7 +8,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 # Ubuntu 14.04 has poco package version 1.3.6
 # if a higher version is required, the below
 # will install from source
-#sudo apt-get -y update && sudo apt-get -y install poco
+#  apt-get -y update &&   apt-get -y install poco
 
 
 # Install from source
@@ -24,9 +24,9 @@ tar -xf poco-${VERSION}-release.tar.gz
 
 pushd poco-poco-${VERSION}-release
   ./configure --omit=Data/ODBC,Data/MySQL --host=arm-linux CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++ && \
-         sudo make -s -j`nproc` && \
-         sudo make -s -j`nproc` install
+           make -s -j`nproc` && \
+           make -s -j`nproc` install
 popd
 
 # clean up
-sudo rm -rf poco-${VERSION}-release.tar.gz poco-poco-${VERSION}-release
+  rm -rf poco-${VERSION}-release.tar.gz poco-poco-${VERSION}-release

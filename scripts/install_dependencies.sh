@@ -18,4 +18,4 @@ bash ${CURRENT_DIR}/install_fastrtps_fastcdr.sh
 bash ${CURRENT_DIR}/install_poco.sh
 
 
-sudo ldconfig
+  ldconfig

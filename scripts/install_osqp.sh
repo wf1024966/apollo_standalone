@@ -6,6 +6,6 @@ UBUNTU_CODENAME=$(lsb_release -sc)
 cd /tmp && rm -rf osqp && git clone --recursive --depth 1 --branch v0.4.1 https://github.com.cnpmjs.org/oxfordcontrol/osqp
 cd osqp && mkdir -p build && cd build && cmake ..
 make -j$(nproc)
-sudo make install
-sudo mkdir -p /usr/local/include/osqp/include
-cd /usr/local/include/osqp && sudo cp *.h include/
+  make install
+  mkdir -p /usr/local/include/osqp/include
+cd /usr/local/include/osqp &&   cp *.h include/
